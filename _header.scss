@@ -1,0 +1,49 @@
+%error{
+    background: red !important;
+    color:white !important;
+}
+@mixin aysu($size,$size2, $radius: 0) {
+    width: $size !important;
+    height: $size2 !important;
+  
+    @if $radius != 0 {
+      border-radius: $radius;
+    }
+  }
+  
+.a{
+    @include aysu(200px,500px ,10px);
+    background:$birinci;
+    width: $container;
+    margin:auto;
+     padding: $pad*5;
+       h1{
+           &:hover{
+            @extend %error;
+               span{
+                   &:hover{
+                       color:red
+                   }
+                   color:saddlebrown;
+               }
+               color:darkblue;
+           }
+             color:darken(#fff,10%);
+    } 
+      span{
+          color:$ikinci;
+    }
+}
+.b{
+   padding: $pad*50;
+   background: $ikinci;
+}
+.c{
+   
+    width: calc((100% - 15px)/3);
+    background: $birinci;
+    margin-right:5px;
+    height: 200px;
+    float:left;
+
+}
